@@ -784,9 +784,9 @@
 							window.addResizeListener($elem[0], onResize);
 						} else {
                             // TODO: validate if needed !!!! too many $digest loops
-                            scope.$watch(function() {
-								return $elem[0].offsetWidth || parseInt($elem.css('width'), 10);
-                            }, resize);
+                            //scope.$watch(function() {
+								//return $elem[0].offsetWidth || parseInt($elem.css('width'), 10);
+                            //}, resize);
 						}
 						var $win = angular.element($window);
 						$win.on('resize', onResize);

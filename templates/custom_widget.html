@@ -1,0 +1,13 @@
+<div class="custom-widget-container">
+    <div class="loading-data-indicator" ng-if="$ctrl.isInitial">
+        <button ng-show="!$ctrl.isLoading" ng-click="$ctrl.getData()">Get all tasks</button>
+        <div class="busy-indicator" ng-show="$ctrl.isLoading"></div>
+    </div>
+    <div class="content-widget" ng-if="!$ctrl.isInitial">
+        <div class="data-container">
+            <div class="table-responsive">
+                <div class="gridStyle" ui-grid="$ctrl.gridOptions"></div>
+            </div>
+        </div>
+    </div>
+</div>

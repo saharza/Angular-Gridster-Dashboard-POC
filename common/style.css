@@ -1,0 +1,215 @@
+.navbar {
+    padding: 0 20px;
+}
+a:hover {
+    cursor: pointer;
+}
+input {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 14px;
+    padding: 4px;
+}
+.container {
+    margin: auto;
+    max-width: 1000px;
+}
+.demo-container{
+    padding-right: 35px;
+    padding-top: 65px;
+}
+
+@media screen and (max-width: 767px) {
+    .demo-container {
+        padding-left: 35px;
+    }
+}
+
+.main-container{
+    overflow: hidden;
+}
+
+.demo-container .gridster-item .widget-header{
+    height: 15px;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.box-header-btns.disabled {
+    pointer-events: none;
+    cursor: text;
+}
+
+.box-header-mouse-events.disabled{
+    pointer-events: none;
+    cursor: text;
+}
+.box-header.disabled{
+    cursor: default;
+}
+
+.box-content {
+    height: calc(100% - 20px);
+}
+
+.box-content iframe{
+    height: 100%;
+    width: 100%;
+}
+
+.box-content .custom-widget-container{
+    height: 100%;
+    width: 100%;
+    overflow-y:auto; /*Should be auto*/
+    /*overflow-x: hidden;*/
+}
+
+.box-content .custom-widget-container > ul {
+    padding-left: 15px;
+    list-style: initial;
+}
+
+.loading-data-indicator{
+    height: 100px;
+    width: 150px;
+    text-align: center;
+    vertical-align: baseline;
+    background-image: url('../images/cubes-backgrounds.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.no-select {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none;   /* Chrome/Safari/Opera */
+    -khtml-user-select: none;    /* Konqueror */
+    -moz-user-select: none;      /* Firefox */
+    -ms-user-select: none;       /* IE/Edge */
+    user-select: none;           /* non-prefixed version, currently not supported by any browser */
+}
+
+.static-template{
+    width: 100%;
+    height: 200px;
+    background-color: #484848;
+}
+
+.custom-widget-container .loading-data-indicator{
+    width: 100%;
+    height: 100%;
+}
+
+.custom-widget-container .loading-data-indicator > .busy-indicator{
+    /*background-image: url('../images/loading-indicator-small.gif');*/
+    background-image: url('../images/loading-indicator.gif');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    height: 100%;
+}
+
+.custom-widget-container .success-hand-icon{
+    background-image: url('../images/success_hand.gif');
+    background-repeat: no-repeat;
+    background-position: 41% 50%;
+    height: 100%;
+}
+
+.custom-widget-container .content-widget{
+    width: 100%;
+    height: 100%;
+}
+
+.custom-widget-container .content-widget > .data-container{
+    width: 100%;
+    height: 90%;
+}
+
+.custom-widget-container .content-widget > .button-container {
+    width: 100%;
+    height: 15%;
+}
+
+.custom-widget-container .content-widget > .data-container > ul{
+    padding-left: 0;
+}
+
+.box-header > .box-header-for-view-mode{
+    float: right;
+    margin-top: -19px;
+    margin-right: -25px;
+}
+
+.box-header > .box-header-for-view-mode > a{
+    padding: 2px;
+}
+
+.gridster .gridster-item.maximized-widget {
+    left: 25px !important;
+    top: 25px !important;
+    width: calc(100% - 50px) !important;
+    height: calc(100% - 50px) !important;
+    z-index: 1000 !important;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+
+@media print {
+    body * {
+        visibility: hidden;
+    }
+    .section-to-print * {
+        visibility: visible;
+    }
+    .section-to-print {
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+}
+
+/***** NG Grid Style ******/
+.gridStyle {
+    border: 1px solid rgb(212,212,212);
+    width: 765px;
+    height: 540px
+}
+.button-column{
+    margin: 0 0 auto;
+    position: relative;
+    left: 15%;
+    min-width: 45px;
+}
+.busy-indicator-small {
+    background-image: url('../images/very-small-indicator.gif');
+    background-repeat: no-repeat;
+    background-position: 30% 50%;
+    height: 100%;
+}
+.busy-indicator-small.editable{
+    background-position: 45% 50%;
+}
+/* Scroll Bar CSS */
+/* Let's get this party started */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 3px rgba(0,0,0,0.3);
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    background: rgba(155,0,0,0.8);
+    -webkit-box-shadow: inset 0 0 3px rgba(0,0,0,0.5);
+}
+::-webkit-scrollbar-thumb:window-inactive {
+    background: rgba(255,0,0,0.4);
+}

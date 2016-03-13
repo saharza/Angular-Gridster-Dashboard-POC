@@ -1,0 +1,32 @@
+<div>
+    <form name="_form" class="form-horizontal" ng-submit="submit(_form)">
+        <div class="modal-header">
+            <button type="button" class="close" ng-click="dismiss()" aria-hidden="true">&times;</button>
+            <h3 style="color:black">Generic Widget Settings</h3>
+        </div>
+
+        <div class="modal-body">
+            <div class="form-group" ng-class="{error: _form.name.$error && _form.submitted}">
+                <label class="control-label col-lg-4 col-md-4" style="color:black">{{widgetTypeLabel}}</label>
+                <div class="col-lg-8 col-md-8">
+                    <div class="dropdown">
+                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+                            SELECT WIDGET TYPE : <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a href="#" ng-click="setWidgetType('Chart_Line_Widget')">Html Chart</a></li>
+                            <li><a href="#" ng-click="setWidgetType('iFrame_Widget2')">Url iFrame</a></li>
+                            <li><a href="#" ng-click="setWidgetType('Custom_Widget')">Custom Widget</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal-footer">
+            <a ng-click="remove()" class="btn btn-danger pull-left" tabindex="-1"><i class="glyphicon glyphicon-trash"></i>Delete</a>
+            <a ng-click="dismiss()" class="btn btn-default" tabindex="-1"><i class="glyphicon glyphicon-remove"></i>Cancel</a>
+            <button type="submit" class="btn btn-primary btn-lg"><i class="glyphicon glyphicon-ok"></i>Save</button>
+        </div>
+    </form>
+</div>

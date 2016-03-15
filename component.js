@@ -2,6 +2,38 @@
  * Created by saharza on 27/01/2016.
  */
 (function() {
+    function MyController($sce, portletEventService) {
+        var self = this;
+        self.$sce = $sce;
+        self.lastSrc;
+        self.widgetSrc;
+        self.url;
+
+        portletEventService.subscribeToEvent('TEST', function(event, argsNewSrc){
+            if(self.widgetSrc !== argsNewSrc) {
+                self.lastSrc = self.widgetSrc;
+                self.widgetSrc = argsNewSrc;
+            }else{
+                self.widgetSrc = self.lastSrc;
+            }
+        });
+    }
+
+    MyController.$inject = ['$sce', 'portletEventService'];
+    Object.defineProperty(MyController.prototype, "url", {
+        enumerable: true,
+        configurable: false,
+        get: function () {
+            return this.$sce.trustAsResourceUrl(this.widgetSrc);
+        },
+        set: function (val) {
+            if(!val){
+                this.url = this.$sce.trustAsResourceUrl('https://www.w3.org/');
+            }else {
+                this.url = this.$sce.trustAsResourceUrl(val);
+            }
+        }
+    });
 
     angular.module('app')
         .component('iframeWidget',  {
@@ -9,28 +41,29 @@
             bindings: {
                 widgetSrc: '@'
             },
-            controller: ['$scope', '$sce', 'portletEventService', function ($scope, $sce, portletEventService) {
-                var self = this;
-                self.lastSrc;
-
-                portletEventService.subscribeToEvent('TEST', function(event, argsNewSrc){
-                    if(self.widgetSrc !== argsNewSrc) {
-                        self.lastSrc = self.widgetSrc;
-                        self.widgetSrc = argsNewSrc;
-                    }else{
-                        self.widgetSrc = self.lastSrc;
-                    }
-                });
-
-                $scope.$watch(function(){
-                    return self.widgetSrc;
-                }, function(newVal, oldVal){
-                    if(!newVal){
-                        newVal = 'https://www.w3.org/';
-                    }
-                    self.url = $sce.trustAsResourceUrl(newVal);
-                });
-            }],
+            controller: MyController,
+            //    ['$scope', '$sce', 'portletEventService', function ($scope, $sce, portletEventService) {
+            //    var self = this;
+            //    self.lastSrc;
+            //
+            //    portletEventService.subscribeToEvent('TEST', function(event, argsNewSrc){
+            //        if(self.widgetSrc !== argsNewSrc) {
+            //            self.lastSrc = self.widgetSrc;
+            //            self.widgetSrc = argsNewSrc;
+            //        }else{
+            //            self.widgetSrc = self.lastSrc;
+            //        }
+            //    });
+            //
+            //    $scope.$watch(function(){
+            //        return self.widgetSrc;
+            //    }, function(newVal, oldVal){
+            //        if(!newVal){
+            //            newVal = 'https://www.w3.org/';
+            //        }
+            //        self.url = $sce.trustAsResourceUrl(newVal);
+            //    });
+            //}],
             controllerAs: '$ctrl',
             //transclude: true,
             template: function(){

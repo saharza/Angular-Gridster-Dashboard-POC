@@ -160,7 +160,7 @@
                                 isMaximized: false
                             }]
                     },
-                    '1_4_2_1' : {
+                    '2_3' : {
                         items:[
                             {
                                 widgetType: 'Generic_Widget',

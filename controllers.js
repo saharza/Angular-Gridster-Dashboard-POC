@@ -195,8 +195,12 @@
                     $scope.form.name = $scope.widgetType.split('_').join(' ');
                 }
 
-                if($scope.form.widgetUrl === ''){
+                if($scope.form.widgetUrl === '') {
                     delete $scope.form.widgetUrl;
+                }
+
+                if($scope.form.widgetType === 'iFrame_Widget2') {
+                    widget.widgetUrl = 'https://www.w3.org/';
                 }
 
                 angular.extend(widget, $scope.form);

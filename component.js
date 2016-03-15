@@ -41,6 +41,7 @@
             bindings: {
                 widgetSrc: '@'
             },
+            //
             controller: MyController,
             // TODO: this code was removed to use the javascript version => Object.defineProperty
             //    ['$scope', '$sce', 'portletEventService', function ($scope, $sce, portletEventService) {

@@ -3,11 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c4ba49ab-ea18-43b2-866a-a0527d17bb91" name="Default" comment="remove scope.watch for gridster size">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component.js" afterPath="$PROJECT_DIR$/component.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers.js" afterPath="$PROJECT_DIR$/controllers.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/services.js" afterPath="$PROJECT_DIR$/services.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Angular-GristerPoc.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,14 +27,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="component.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="component.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/component.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="2635">
-              <caret line="4" column="20" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
+            <state vertical-scroll-proportion="0.5393655" vertical-offset="255" max-vertical-offset="2652">
+              <caret line="44" column="97" selection-start-line="44" selection-start-column="97" selection-end-line="44" selection-end-column="97" />
               <folding>
                 <element signature="e#0#44#0" expanded="false" />
-                <element signature="e#4230#10815#0" expanded="false" />
+                <element signature="e#4328#10913#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -109,10 +104,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="controllers.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="controllers.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controllers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="2.2773209" vertical-offset="0" max-vertical-offset="10149">
+            <state vertical-scroll-proportion="0.0" vertical-offset="816" max-vertical-offset="10149">
               <caret line="198" column="49" selection-start-line="198" selection-start-column="49" selection-end-line="198" selection-end-column="49" />
               <folding>
                 <element signature="e#68#2176#0" expanded="false" />
@@ -233,8 +228,8 @@
         <option value="$PROJECT_DIR$/src/angular-gridster.js" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/services.js" />
-        <option value="$PROJECT_DIR$/component.js" />
         <option value="$PROJECT_DIR$/controllers.js" />
+        <option value="$PROJECT_DIR$/component.js" />
       </list>
     </option>
   </component>
@@ -638,7 +633,7 @@
       <workItem from="1455541436346" duration="97795000" />
       <workItem from="1456642822833" duration="19335000" />
       <workItem from="1457257100208" duration="6893000" />
-      <workItem from="1457877885759" duration="9934000" />
+      <workItem from="1457877885759" duration="10663000" />
     </task>
     <task id="LOCAL-00001" summary="first test commit">
       <created>1457878081586</created>
@@ -656,10 +651,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="260782000" />
+    <option name="totallyTimeSpent" value="261511000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1696" height="1026" extended-state="7" />
+    <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -855,7 +850,7 @@
           <caret line="86" column="33" selection-start-line="86" selection-start-column="33" selection-end-line="86" selection-end-column="33" />
           <folding>
             <element signature="e#0#44#0" expanded="false" />
-            <element signature="e#4230#10815#0" expanded="false" />
+            <element signature="e#4328#10913#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -974,7 +969,7 @@
           <caret line="82" column="18" selection-start-line="82" selection-start-column="18" selection-end-line="82" selection-end-column="18" />
           <folding>
             <element signature="e#0#44#0" expanded="false" />
-            <element signature="e#4230#10815#0" expanded="false" />
+            <element signature="e#4328#10913#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1326,20 +1321,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/component.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="2635">
-          <caret line="4" column="20" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#44#0" expanded="false" />
-            <element signature="e#4230#10815#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/controllers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.2773209" vertical-offset="0" max-vertical-offset="10149">
+        <state vertical-scroll-proportion="0.0" vertical-offset="816" max-vertical-offset="10149">
           <caret line="198" column="49" selection-start-line="198" selection-start-column="49" selection-end-line="198" selection-end-column="49" />
           <folding>
             <element signature="e#68#2176#0" expanded="false" />
@@ -1350,6 +1334,17 @@
             <element signature="e#28162#29994#0" expanded="false" />
             <element signature="e#30093#31426#0" expanded="false" />
             <element signature="e#31457#31626#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/component.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5393655" vertical-offset="255" max-vertical-offset="2652">
+          <caret line="44" column="97" selection-start-line="44" selection-start-column="97" selection-end-line="44" selection-end-column="97" />
+          <folding>
+            <element signature="e#0#44#0" expanded="false" />
+            <element signature="e#4328#10913#0" expanded="false" />
           </folding>
         </state>
       </provider>

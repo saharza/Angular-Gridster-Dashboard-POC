@@ -3,7 +3,7 @@
  */
 (function() {
     angular.module('app', ['gridster', 'ui.bootstrap', 'ui.grid', 'chart.js'])
-// Optional configuration
+        // Optional configuration
         .config(['$httpProvider', 'ChartJsProvider', function ($httpProvider, ChartJsProvider) {
             // configure $http service
             $httpProvider.defaults.useXDomain = true;
@@ -18,23 +18,24 @@
                 colours: ['#FF5252', '#FF8A80'],
                 responsive: true
             });
+        }]).run(['$templateCache', function($templateCache){
+            $templateCache.put('iFrame_Widget1', '<iframe-widget widget-src="{{\'http://www.nexidia.com/\'}}"></iframe-widget>');
+            $templateCache.put('iFrame_Widget2', '<iframe-widget widget-src="{{widget.widgetUrl}}"></iframe-widget>');
+            $templateCache.put('Chart_Line_Widget', '<chart-line-widget></chart-line-widget>');
+            $templateCache.put('Custom_Widget', '<custom-widget></custom-widget>');
+            $templateCache.put('Generic_Widget', '<div style="top:60px;left:20px;position:absolute;">Open widget setting to select widget type...</div>');
+            $templateCache.put('Angular_2_Widget', '<angular-two></angular-two>');
+            $templateCache.put('Angular_2_1_Widget', '<angular-two-one></angular-two-one>');
+            $templateCache.put('child_component_Widget', '<list-of-names></list-of-names>');
+            $templateCache.put('parent_component_Widget', '<ng2-parent-component></ng2-parent-component>');
         }]);
 
-    $(document).ready(function () {
-        $('[data-toggle=offcanvas]').click(function () {
-            $('.row-offcanvas').toggleClass('active');
-        });
-
-        // Bootstrapping the application after document is ready.
-        angular.bootstrap($('body'), ['app']);
-
-        // TODO: trying to add new style element to the iframe head element.
-        //var cssStyle = "<style type='text/css'>  " +
-        //    "#com.ibm.bi.glass.appbar{ display: none !important; }" +
-        //    "</style>";
-        //$('iframe').load( function() {
-        //    $('iframe').contents().find("head")
-        //        .append($(cssStyle));
-        //});
-    });
+    //$(document).ready(function () {
+    //    $('[data-toggle=offcanvas]').click(function () {
+    //        $('.row-offcanvas').toggleClass('active');
+    //    });
+    //
+    //    // Bootstrapping the application after document is ready.
+    //    angular.bootstrap($('body'), ['app']);
+    //});
 })();

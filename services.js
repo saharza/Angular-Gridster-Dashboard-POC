@@ -8,6 +8,8 @@
             'iFrame_Widget2': '<iframe-widget widget-src="{{widget.widgetUrl}}"></iframe-widget>',
             'Chart_Line_Widget': '<chart-line-widget></chart-line-widget>',
             'Custom_Widget': '<custom-widget></custom-widget>',
+            'Wiki_Widget': '<angular-two></angular-two>', //'<my-wiki>Wiki Loading...</my-wiki>',
+            'Smart_Wiki_Widget': '<my-wiki-smart>WikiSmart Loading...</my-wiki-smart>',
             'Generic_Widget': '<div style="top:60px;left:20px;position:absolute;">Open widget setting to select widget type...</div>'
         }).service('predefinedLayoutTemplateService', ['$q',
             function($q){

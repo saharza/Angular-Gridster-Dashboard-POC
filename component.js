@@ -227,9 +227,19 @@
             templateUrl: '../templates/custom_widget.html'
         })
         .directive('widgetContentHandler',  ['$compile', 'widgetTemplatesProvider', function factory($compile, widgetTemplatesProvider) {
+            //function compileToComponent(template, directives) {
+            //    return app.ng2.core.Component({
+            //        selector: 'fake',
+            //        template: template,
+            //        directives: directives
+            //    }).Class({
+            //        constructor: function () {}
+            //    });
+            //}
+
             var directiveObject = {
                 restrict: "EA",
-                require: '^^gridster-item',
+                //require: '^^gridster-item',
                 scope:{
                     widget: '=widget'
                 },
@@ -243,12 +253,23 @@
                     $scope.$watch(function(){
                             return $scope.widget.widgetType;
                     },function(newVal, oldVal){
-                        // Step 1: parse HTML into DOM element
-                        var template = angular.element(widgetTemplatesProvider[newVal]),
-                        // Step 2: compile the template
-                            linkFn = $compile(template);
-                        // Step 3: link the compiled template with the scope.
-                        $element.html(linkFn($scope));
+
+                        if(newVal.indexOf('Wiki_Widget') === -1) {
+                            // Step 1: parse HTML into DOM element
+                            var template = angular.element(widgetTemplatesProvider[newVal]),
+                            // Step 2: compile the template
+                                linkFn = $compile(template);
+                            // Step 3: link the compiled template with the scope.
+                            $element.html(linkFn($scope));
+                        }
+                        //else{
+                        //    // angular2 component rendering
+                        //    //$element.attr('#container', '');
+                        //    //app.ng2.core.DynamicComponentLoader.loadNextToLocation(compileToComponent(widgetTemplatesProvider[newVal], ['Wiki_Widget']), $element.parent);
+                        //    //var ng2Loader = new app.ng2.core.DynamicComponentLoader();
+                        //    var ng2Loader = ng.core.Inject(['DynamicComponentLoader']);
+                        //    ng2Loader.loadNextToLocation(compileToComponent(widgetTemplatesProvider[newVal], ['Wiki_Widget']), $element.parent);
+                        //}
                     });
                 }
                 //compile: function($element, $attrs){
